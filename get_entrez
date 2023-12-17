@@ -36,6 +36,13 @@ fi
 
 
 GENE=${@: -1}
+if ! command -v firefox &> /dev/null
+then
+	FOX=0
+elif ! command -v google-chrome &> /dev/null
+then
+	GOOG=0
+
 
 if [ $FOX ]
 then
@@ -46,6 +53,6 @@ then
 	google-chrome "https://www.ncbi.nlm.nih.gov/gene/?term=${GENE^^}" &
 
 else
-	echo "firefox or chrome not detected"
+	echo "Missing flag or firefox and chrome are not detected"
 fi
 

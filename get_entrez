@@ -2,7 +2,7 @@
 Help()
 {
    # Display Help
-   echo "Add description of the script functions here."
+   echo "Command line tool to open the Entrez gene search page for a given gene"
    echo
    echo "Syntax: get_entrez [-g|h|f] GENE_NAME"
    echo "options:"

@@ -4,7 +4,7 @@ Help()
    # Display Help
    echo "Add description of the script functions here."
    echo
-   echo "Syntax: get_entrez [-g|h|f]"
+   echo "Syntax: get_entrez [-g|h|f] GENE_NAME"
    echo "options:"
    echo "g     Chrome"
    echo "h     Print this Help."

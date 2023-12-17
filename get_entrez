@@ -1,0 +1,51 @@
+#!/bin/bash
+Help()
+{
+   # Display Help
+   echo "Add description of the script functions here."
+   echo
+   echo "Syntax: get_entrez [-g|h|f]"
+   echo "options:"
+   echo "g     Chrome"
+   echo "h     Print this Help."
+   echo "f     firefox"
+   echo
+}
+
+while getopts ":hfg:" option; do
+   case $option in
+      h) # display Help
+         Help
+         exit;;
+      f) # Enter a name
+         FOX=1;;
+      g)
+	GOOG=1;;
+     \?) # Invalid option
+         echo "Error: Invalid option"
+         exit;;
+   esac
+done
+
+
+
+if [[ $# -eq 0 ]] ; then
+    Help
+    exit 0
+fi
+
+
+GENE=${@: -1}
+
+if [ $FOX ]
+then
+	firefox "https://www.ncbi.nlm.nih.gov/gene/?term=${GENE^^}";
+
+elif [ $GOOG ]
+then
+	google-chrome "https://www.ncbi.nlm.nih.gov/gene/?term=${GENE^^}" &
+
+else
+	echo "firefox or chrome not detected"
+fi
+

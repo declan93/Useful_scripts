@@ -54,5 +54,6 @@ then
 
 else
 	echo "Missing flag or firefox and chrome are not detected"
+	Help
 fi
 

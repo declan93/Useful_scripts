@@ -42,7 +42,7 @@ then
 elif ! command -v google-chrome &> /dev/null
 then
 	GOOG=0
-
+fi;
 
 if [ $FOX ]
 then

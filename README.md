@@ -6,3 +6,6 @@ get_entrez -f GENE_NAME
 # or Chrome
 get_entrez -g GENE_NAME
 ```
+
+### OOP_1st_biotech.ipynb  
+This is a jupyter-notebook giving an introduction to object orientated programming. Written for 1st year biotechnology students. 
